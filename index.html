@@ -62,13 +62,7 @@ h1 {
 }
 
 /* GRID (only sites) */
-.container {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 0 10px;
-}
+
 
 /* Cards */
 .card {
@@ -163,6 +157,33 @@ h1 {
   box-shadow: 0 0 18px red, 0 0 30px #ff0000;
   transform: scale(1.05);
 }
+  .container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr; /* 👈 2 ki jagah 1 */
+  gap: 12px;
+  padding: 0 10px;
+}
+  /* Premium Card */
+.premium {
+  border: 1px solid gold;
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
+  position: relative;
+}
+
+/* Tag */
+.tag {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  color: gold;
+}
+
+/* Optional glow animation */
+.premium:hover {
+  box-shadow: 0 0 25px gold, 0 0 40px orange;
+  transform: scale(1.05);
+}
   
 </style>
 
@@ -185,8 +206,15 @@ h1 {
 <!-- ONLY SITES GRID -->
 <div class="container">
  
-  <a class="card" href="https://www.azmale365.net">💎 Aazmale365.net</a>
- <a class="card" href="https://www.azmale365.co.in">🌐 Aazmale365.co</a>
+  <a class="card premium" href="https://www.azmale365.net">
+    🥇 Aazmale365.net  
+    <span class="tag">⭐ Users Choice</span>
+  </a>
+
+  <a class="card" href="https://www.azmale365.co.in">
+    💎 Aazmale365.co
+  </a>
+
 </div>
 
   <div class="support-tag">
